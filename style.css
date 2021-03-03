@@ -1,0 +1,657 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+    background-color: #fff;
+}
+
+.top
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #252B42;
+    font-weight: 600;
+    height: 156px;
+    align-items: center;
+    margin-left: 90px;
+    margin-right: 40px;
+}
+
+.menu > ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 580px;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.menu > ul > li a
+{
+    text-decoration: none;
+    color: #252B42;
+}
+
+.menu > ul > li a:hover
+{
+    color: #FA4A0C;
+}
+
+
+
+
+
+/* *
+{
+    outline: 1px solid red;
+} */
+
+
+
+
+
+
+
+
+.header {
+    margin-top: 20px;
+    background-color: #fff;
+    max-width: 768px;
+    min-height: 156px;
+}
+
+.header ul {
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a
+{
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #252B42;
+  text-align: right;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    color: #FA4A0C;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.header .logo img
+{
+    max-width: 104px;
+    height: 51px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 768px)
+{
+  .header
+  {
+      display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero
+{
+    background-image: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 84vh;
+}
+
+.heroT
+{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.heroTitle
+{
+    max-width: 1005px;
+    z-index: 2;
+}
+
+.hero h2
+{
+    margin-top: 73px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #f7f7f7;
+    line-height: 36px;
+}
+
+.hero h1
+{
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+
+.hero h3
+{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #f7f7f7;
+    margin-bottom: 60px;
+}
+
+.hero button
+{
+    margin-left: 34px;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    width: 236px;
+    height: 68px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(183, 50, 39, 0.2);
+    padding: 16px 0;
+    transition: 0.2s;
+}
+
+.hero button:hover
+{
+    background-color: #FA4A0C;
+}
+
+.hero button:focus
+{
+    background-color: #FA4A0C;
+    outline: none;
+    border-color: #000;
+}
+
+.phones
+{
+    display: flex;
+    justify-content: center;
+    margin-top: -300px;
+    position: relative;
+}
+
+.phones::after
+{
+    position: absolute;
+    content: "";
+    width: 884px;
+    border: 3px solid #E4E4E4;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.main
+{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main h1
+{
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 36px;
+    color: #000000;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 71px;
+}
+
+.main .content
+{
+    display: flex;
+    max-width: 1040px;
+    height: 807px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.content .picture, .content .description
+{
+    min-width: 50%;
+}
+
+.main .content:nth-of-type(even)
+{
+    flex-direction: row-reverse;
+}
+
+.main .content:nth-of-type(even) .description
+{
+    flex-direction: row-reverse;
+    margin-left: 25%;
+}
+
+
+.main .content:nth-of-type(even) .picture
+{
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+}
+
+.main h2
+{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    color: #252B42;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main h3
+{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FA4A0C;
+}
+
+.main p
+{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    color: #737373;
+}
+
+.content .picture
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download
+{
+    background-image: url(download.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 84vh;
+}
+
+.downloadT
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.downloadTitle
+{
+    max-width: 1005px;
+}
+
+.download h2
+{
+    margin-bottom: 100px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #f7f7f7;
+    line-height: 38px;
+}
+
+.download h1
+{
+    margin-top: 200px;
+    font-size: 40px;
+    line-height: 57px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.text p
+{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    color: #5C5C5C;
+}
+
+.download button
+{
+    margin-left: 34px;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    width: 142px;
+    font-weight: 700;
+    height: 64px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(183, 50, 39, 0.2);
+    padding: 16px 0;
+    transition: 0.2s;
+}
+
+.download button:hover
+{
+    background-color: #FA4A0C;
+}
+
+.download button:focus
+{
+    background-color: #FA4A0C;
+    outline: none;
+    border-color: #000;
+}
+
+.footerStopka
+{
+    max-width: 1210px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+}
+
+@media (min-width: 360px) and (orientation: portrait)
+{
+    .top
+    {
+        height: 112px;
+        margin: 17px 16px;
+        max-width: 100%;
+        overflow: hidden;
+        display: none;
+    }
+    .top img
+    {
+        max-width: 104px;
+        height: 51px;
+    }
+    .hero
+    {
+        background-image: none;
+        width: 100%;
+    }
+    .heroTitle
+    {
+        margin: 0 auto;
+    }
+    .hero h1
+    {
+        font-size: 36px;
+        line-height: 42px;
+        color: #252B42;
+        margin: 7px 0px;
+    }
+    .hero h2
+    {
+        font-size: 16px;
+        line-height: 24px;
+        color: #737373;
+        margin: 7px 0px;
+    }
+    .hero h3
+    {
+        font-size: 24px;
+        line-height: 38px;
+        color: #737373;
+        margin: 17px 10px;
+    }
+    .hero button
+    {
+        background-color: transparent;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+        color: #FA4A0C;
+        border: 1px solid #FA4A0C;
+        transition: none;
+        margin-bottom: 17px;
+        box-shadow: none;
+        margin-left: 0;
+    }
+    .hero button:hover
+    {
+        color: #fff;
+    }
+    .phones img
+    {
+        margin: 0 auto;
+        max-width: 100%;
+        margin-top: 180px;
+        margin-left: -25px;
+    }
+    .phones::after
+    {
+        display: none;
+    }
+    .main
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main h1
+    {
+        font-size: 24px;
+        line-height: 36px;
+        color: #000000;
+        opacity: 1;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .main h1::after
+    {
+        position: absolute;
+        content: "";
+        max-width: 414px;
+        border: 3px solid #E4E4E4;
+        margin: auto;
+        right: 0;
+        left: 0;
+        bottom: -500px;
+        overflow: hidden;
+    }
+    .main .content:nth-of-type(odd)
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 114px;
+        text-align: center;
+    }
+    .main .content:nth-of-type(even)
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 114px;
+        text-align: center;
+    }
+    .main .content:nth-of-type(even) .description
+    {
+        margin-left: 0;
+    }
+    .download
+    {
+        background-image: none;
+        background-color: #252B42;
+        height: 564px;
+        width: 100%;
+        margin-top: 70px;
+    }
+    .downloadTitle
+    {
+        width: 100%;
+    }
+    .download h2
+    {
+        margin-bottom: 60px;
+    }
+    .download h1
+    {
+        margin-top: 110px;
+        margin-bottom: 15px;
+    }
+    .download button
+    {
+        margin-left: 0;
+        box-shadow: none;
+        transition: none;
+    }
+    .footerStopka
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 60px auto;
+    }
+    .footerStopka .logo
+    {
+        display: none;
+    }
+}
